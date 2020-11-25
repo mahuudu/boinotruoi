@@ -1,0 +1,64 @@
+<html>
+<head>
+	<title> Du boi toan :)</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+		<script language="javascript" >
+			function  mydata() {
+		
+			var a = document.getElementById('input1').value;
+
+			var boiMatNam=["Nếu là nốt ruồi son sẽ mang lại sự cát tường.","  Tính nóng nảy hung bạo  ","  Hại cha hoặc gây điều bất lợi cho cha ","  "];
+			var content = [];
+			var option = document.getElementById("option").getAttribute("option");
+			alert(option);
+			document.getElementById('demo').innerHTML=content;	
+			
+				return false;
+			}
+	
+
+          </script>
+
+</head>
+<body>
+<div class="header">
+		<h3 style=" text-align: center; 	padding: 10px;"> Bói nốt ruồi vui. hihi :))</h3>
+</div>
+<div class="container">
+	  <div class="row">
+	    <div class="col-sm-6">
+	    	<div class="images">
+	    		<img id="imageToSwap" src="../boi/images/nam.png" class="img-fluid" alt="Responsive image">
+
+	    	</div>
+	    </div>
+	    <div class="col-sm-6">
+	    	<form name="controls">
+	    	  <div class="form-group">
+	          <label for="exampleFormControlSelect1">Chọn Loại nuốt rồi tra cứu</label>
+	    	 	 <select  class="form-control" id="option" option="" onchange="$('#imageToSwap').attr('src', this.options[this.selectedIndex].value);  " >
+				      <option  value="../boi/images/nam.png" onchange = "$('#option').attr('option','1');"> Nốt ruồi trên mặt nam giới</option>
+				      <option value="../boi/images/nu.jpg" onchange = "$('#option').attr('option','2');">Nốt ruồi trên mặt nữ giới</option>
+				      <option id="hinh3">Nốt ruồi trên </option>
+				      <option id="hinh4">Nốt ruồi trên </option>
+	   			</select>
+	   			</div>
+		   		<div class="form-group">
+	   				<label for="exampleFormControlInput1"> Vị trí nốt ruồi </label>
+	    			<input type="text" class="form-control" id="input1" onkeyup="mydata();" placeholder=" ...">
+	 			 </div>
+	 			 <!-- <button onclick="mydata();"> Kết quả</button> -->
+
+	 		</form>	 
+	 		<h3> Kết quả :</h3>
+	 		<div id ="demo">...</div>
+	 		<iframe src="https://giphy.com/embed/ygCJ5Bul73NArGOSFN" width="384" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/reaction-ygCJ5Bul73NArGOSFN">via GIPHY</a></p>
+
+	    </div>
+	  </div>
+</div>
+</body>
+</html>
